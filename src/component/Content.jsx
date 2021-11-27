@@ -1,17 +1,16 @@
 import React from 'react'
 
 function Content(props) {
+    console.log(props.parts)
     return (
         <>
-            <p>
-        {props.part1} {props.exercises1}
-      </p>
-      <p>
-        {props.part2} {props.exercises2}
-      </p>
-      <p>
-        {props.part3} {props.exercises3}
-      </p>
+            {props.parts.map(e => { 
+               return <p>
+                {e.name} {e.exercises}
+              </p>
+                })}
+       
+        
         </>
     )
 }
